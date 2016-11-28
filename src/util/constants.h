@@ -8,6 +8,8 @@
 #ifndef UTIL_CONSTANTS_H_
 #define UTIL_CONSTANTS_H_
 
+#define maxp(a, b) 	(((a) > (b)) ? (a) : (b))
+
 #include <string>
 #include "matrix.h"
 
@@ -57,7 +59,7 @@ namespace latentregpp {
 	};
 
 	enum model_type {
-		onepl = 1, twopl = 2, threepl = 3
+	  onepl = 1, twopl = 2, threepl = 3, bayesian = 4
 	};
 }
 

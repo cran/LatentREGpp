@@ -5,7 +5,8 @@
 \title{Polytomous data simulation}
 \usage{
 simulate_polytomous(dim.data = 1, sample.size = 1000,
-  size.cluster = c(20), ncatgs = rep(4, 20), seed_data)
+  size.cluster = c(20), ncatgs = rep(4, 20), seed_data = 5000L,
+  model = "2PL")
 }
 \arguments{
 \item{dim.data}{Data dimension}
@@ -17,9 +18,18 @@ simulate_polytomous(dim.data = 1, sample.size = 1000,
 \item{ncatgs}{Vector containing the number of categories for each item}
 
 \item{seed_data}{Seed for simulation}
+
+\item{model}{the model used to generate the test. It can have values of "1PL", "2PL" or "3PL".}
+}
+\value{
+list with the simulated data, the information of the item parameters and
+the individual parameters
 }
 \description{
 This function generates dichotomous test of an specified dimension and size. The items per dimension are specified in the size.cluster vector, and the individuals are specified in sample.size.
 The amout of categories of each item is determined with ncatgs.
+}
+\seealso{
+\code{\link{simulate_polytomous}}
 }
 

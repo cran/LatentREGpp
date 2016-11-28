@@ -1,15 +1,14 @@
 #'@name quadpoints
 #'@title Quadrature points
-#'@description Return a list with quadrature points according dimensionality, technique
+#'@description Return a list with quadrature points according to dimensionality, technique
 #'and number of points.
 #'@param dim Dimension of the quadrature
-#'@param quad_tech A string with technique. "Gaussian" for Gaussian quadrature. 
+#'@param quad_tech A string to specify the quadrature calculation technique. Use "Gaussian" to use that method, or
 #'or "QMCEM" for Quasi-Monte Carlo quadrature.
-#'@param quad_points Amount of quadrature points. If quadratura_technique is "Gaussian". 
-#'It can be NULL, in Quasi-Monte Carlo it is 2000 by default. 
+#'@param quad_points An integer number specifying the amount of quadrature points to use. If NULL, the program will choose the best one.
+#'If Quasi-Monte Carlo method is specified, the default value is of 2000 points. 
 #'@examples
 #'\dontrun{qp = quadpoints(dim = 4,quad_tech = "QMCEM",quad_points = 3000)}
-#'@export
 quadpoints = function(dim, quad_tech = "Gaussian", quad_points = NULL) {
 	if ( quad_tech == "QMCEM" ) {
 
